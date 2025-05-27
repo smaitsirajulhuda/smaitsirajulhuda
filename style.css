@@ -1,0 +1,79 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+header {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+nav {
+    background-color: #00509e;
+    padding: 10px;
+    text-align: center;
+}
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+main {
+    padding: 20px;
+}
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.sosial-media {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.ikon-sosmed {
+    width: 40px;
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+
+.ikon-sosmed:hover {
+    transform: scale(1.2);
+}
+
+
+
+/* Animasi untuk elemen muncul dari kiri */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animasi-muncul {
+    opacity: 0;
+    animation: slideInLeft 1s ease forwards;
+}
+
+.animasi-delay-1 { animation-delay: 0.3s; }
+.animasi-delay-2 { animation-delay: 0.6s; }
+.animasi-delay-3 { animation-delay: 0.9s; }
+.animasi-delay-4 { animation-delay: 1.2s; }
+.animasi-delay-5 { animation-delay: 1.5s; }
+.animasi-delay-6 { animation-delay: 1.8s; }
+.animasi-delay-7 { animation-delay: 2.1s; }
