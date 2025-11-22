@@ -7,8 +7,66 @@
    Beranda - Website Sekolah
   </title>
   <link href="style.css" rel="stylesheet"/>
+
+  <!-- POPUP STYLE -->
+  <style>
+    #popup-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+    #popup-box {
+      background: #fff;
+      padding: 25px 30px;
+      border-radius: 10px;
+      text-align: center;
+      width: 300px;
+      font-family: Arial;
+    }
+    #popup-box button {
+      border: none;
+      padding: 10px 18px;
+      margin: 10px 5px 0;
+      cursor: pointer;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+    #btn-lanjut {
+      background: #22c55e;
+      color: #fff;
+    }
+    #btn-lain {
+      background: #2563eb;
+      color: #fff;
+    }
+  </style>
+
  </head>
  <body>
+
+  <!-- POPUP -->
+  <div id="popup-overlay">
+    <div id="popup-box">
+      <h3>Silakan Pilih</h3>
+      <p>Lanjutkan ke website atau pilih halaman lain?</p>
+      <button id="btn-lanjut" onclick="lanjutkan()">Lanjutkan</button>
+      <button id="btn-lain" onclick="pilihLain()">Pilih Lain</button>
+    </div>
+  </div>
+
+  <script>
+    function lanjutkan() {
+      document.getElementById("popup-overlay").style.display = "none";
+    }
+    function pilihLain() {
+      window.location.href = "https://google.com"; // Ganti dengan link lain
+    }
+  </script>
+
   <header>
    <img alt="Logo Sekolah" class="animasi-muncul animasi-delay-1" src="logo.png" style="height: 120px;"/>
   </header>
